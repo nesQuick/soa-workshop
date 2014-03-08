@@ -31,3 +31,18 @@ Excersises and examples will be in Ruby. To master this adventure attendees must
 * Proper Service/Client Development
 * Deployments
 * Browsers as a Client
+
+## Setup Vagrant
+
+1. Install [VirtualBox](https://www.virtualbox.org/)
+2. Install [Vagrant 1.1+](http://vagrantup.com/)
+3. Setup the SOA box with:
+
+```sh
+$ cd box
+$ vagrant up
+```
+
+## Credits
+
+This workshop thankfully uses the [rails-dev-box](https://github.com/rails/rails-dev-box) vagrant box which is released under the MIT license.
