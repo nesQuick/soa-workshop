@@ -43,6 +43,12 @@ $ cd box
 $ vagrant up
 ```
 
+### Fix File Permissions
+
+```sh
+$ sudo mount /vagrant -o remount;cd `pwd`
+```
+
 ## Credits
 
 This workshop thankfully uses the [rails-dev-box](https://github.com/rails/rails-dev-box) vagrant box which is released under the MIT license.
