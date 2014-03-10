@@ -1,0 +1,3 @@
+eval(IO.read(File.expand_path('../../shared/Gemfile', __FILE__)), binding)
+
+gem 'sinatra', '~> 1.4.4'

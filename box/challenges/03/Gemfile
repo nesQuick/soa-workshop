@@ -1,0 +1,1 @@
+eval(IO.read(File.expand_path('../../shared/Gemfile', __FILE__)), binding)
