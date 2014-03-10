@@ -1,5 +1,1 @@
-Bundler.require
-
-require_relative './lib/hello_world_app'
-
-run HelloWorldApp
+eval(IO.read(File.expand_path('../../shared/hello_world.ru', __FILE__)), binding)
