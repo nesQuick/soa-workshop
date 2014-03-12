@@ -1,7 +1,7 @@
 require_relative '../../shared/spec_helper'
 require 'hello_world_app'
 
-describe HelloWorldApp do
+describe HelloWorldApp::App do
   describe "authorized" do
     before do
       authorize 'last', 'unicorn'
