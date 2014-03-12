@@ -5,6 +5,9 @@ Vagrant.configure('2') do |config|
 
   config.vm.network :forwarded_port, guest: 9292, host: 9292
   config.vm.network :forwarded_port, guest: 4567, host: 4567
+  config.vm.network :forwarded_port, guest: 4568, host: 4568
+  config.vm.network :forwarded_port, guest: 4569, host: 4569
+  config.vm.network :forwarded_port, guest: 4570, host: 4570
 
   config.vm.provision :puppet do |puppet|
     puppet.manifests_path = 'puppet/manifests'
