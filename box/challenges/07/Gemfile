@@ -1,0 +1,5 @@
+source 'https://rubygems.org'
+
+eval(IO.read(File.expand_path('../../shared/Gemfile', __FILE__)), binding)
+
+gem 'hello_world_app', path: './hello_world_app'
