@@ -10,28 +10,6 @@ Over the course of 2 days attendees will learn about the core theory behind serv
 
 Excersises and examples will be in Ruby. To master this adventure attendees must feel comfortable reading and writing simple Ruby and understand how traditional web apps work.
 
-## Agenda
-
-* Intro to Service Oriented Architectures (SOA)
-* Modular Web Applications
-	* First Rack Application
-	* Rack Mix & Match
-* Documentation
-* Testing
-	* End to End Tests
-	* Test Setups / Harnesses
-* Development Setups
-* Service Authentication
-	* OAuth
-	* Single Sign Out
-* Inter Service Communication
-	* HTTP
-	* Message Busses
-	* etc (Websockets et al.)
-* Proper Service/Client Development
-* Deployments
-* Browsers as a Client
-
 ## Setup Vagrant
 
 1. Install [VirtualBox](https://www.virtualbox.org/)
