@@ -1,6 +1,6 @@
 # Challenge 04
 
-Use [Sinatra](http://www.sinatrarb.com/) to make an equivalent app to the one from [challenge 02](/walski/soa-workshop/tree/master/box/challenges/02).
+Use [Sinatra](http://www.sinatrarb.com/) to make an equivalent app to the one from [challenge 02](../02).
 
 # Setup
 

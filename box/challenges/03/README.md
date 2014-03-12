@@ -1,6 +1,6 @@
 # Challenge 03
 
-Use [Rack::Builder](http://rack.rubyforge.org/doc/classes/Rack/Builder.html) to make an equivalent app to the one from [challenge 02](/walski/soa-workshop/tree/master/box/challenges/02).
+Use [Rack::Builder](http://rack.rubyforge.org/doc/classes/Rack/Builder.html) to make an equivalent app to the one from [challenge 02](../02).
 
 # Setup
 
