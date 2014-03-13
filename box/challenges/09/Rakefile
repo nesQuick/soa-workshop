@@ -1,0 +1,3 @@
+import '../shared/tasks.rake'
+
+task :default => :spec
