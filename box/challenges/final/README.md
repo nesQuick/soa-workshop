@@ -122,21 +122,6 @@ Returns status ``404`` if the supplied ID does not exist.
 
 * use whatever framework
 
-## Grading
-
-* Implement what is describes
-* Tests
-* 12 factor app
-* make gems out of the systems
-* 110 points / 100 needed for grade 1
-
-## Grading Checklist
-
-### Location Management
-* Handles cases when not all fields are set
-* Returns valid JSON in error cases
-* Special validations that prevents POST requests with an ID
-
 ## Important Aside
 
 During this challenge you create 4 services. Remember that while trying to resemble real life conditions these services are not meant to be ready for any *production* use. Your focus should therefore lie on the interaction between services, not making the services itself *pretty*, super stable or super performant.
