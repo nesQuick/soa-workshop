@@ -220,7 +220,7 @@ Requests shall have an empty body. Returns status ``200`` and a JSON encoded arr
     "name": "Warehouse Hamburg",
     "address": "Gewerbestraße 1, 21035 Hamburg, Germany",
     "id": 563,
-    items: [
+    "items": [
       {
         "name": "Lobby chair #1",
         "location": 563,
