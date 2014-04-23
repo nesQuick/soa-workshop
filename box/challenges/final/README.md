@@ -45,7 +45,7 @@ The location management system holds a very simple model of data about each loca
 
 * name (any string)
 * address (any string)
-* id (an auto incremented number that is set by the system)
+* id (an auto incremented integer that is set by the system)
 
 So a location could look like this:
 
@@ -98,25 +98,94 @@ Requests made with an empty body. Returns status ``200`` and a JSON encoded arra
   {
     "name": "Warehouse Hamburg",
     "address": "Gewerbestraße 1, 21035 Hamburg, Germany",
-    "id": 562
+    "id": 563
   },
   {
     "name": "Headquarters Salzburg",
     "address": "Mozart Gasserl 4, 13371 Salzburg, Austria",
-    "id": 562
+    "id": 568
   }
 ]
 ```
 
 **DELETE /locations/:id**
 
-Requests made with an empty body. Deletes the location with the ID supplied via the URL then returns status ``200`` and an empty body.
+Requests made with an empty body. Deletes the location specified by the ID supplied in the URL. It then returns status ``200`` and an empty body.
 
 Returns status ``404`` if the supplied ID does not exist.
 
 ## Item Tracking System
 
-…
+The item tracking system holds a very simple model of data about each tracked item. The data model looks like this:
+
+* name (any string)
+* location id (an integer referencing a location)
+* id (an auto incremented integer that is set by the system)
+
+So a tracked item could look like this:
+
+```ruby
+{
+  "name" => "Johannas PC",
+  "location" => 123,
+  "id" => 456
+}
+```
+
+The system has actions to create, delete and list all tracked items. Each request must be authenticated with a valid user name / password combination (see User Management System for all existing users).
+
+**POST /items**
+
+The request body must be a JSON encoded item object without the id like this:
+
+```json
+{
+  "name": "Johannas PC",
+  "location": 123
+}
+```
+
+The system should create that record internally, and return a HTTP status ``201`` with a complete JSON representation of the tracked item (including the ID) as it's response body. Like this:
+
+```json
+{
+  "name": "Johannas PC",
+  "location": 123,
+  "id": 456
+}
+```
+
+If not all fields are send in the request return an HTTP error code and a JSON encoded error message as the body. The system does **not** have to check for the validity of the supplied location ids!
+
+**GET /items**
+
+Requests made with an empty body. Returns status ``200`` and a JSON encoded array of all tracked items known to the system. Like this:
+
+```json
+[
+  {
+    "name": "Johannas PC",
+    "location": 123,
+    "id": 456
+  },
+  {
+    "name": "Johannas desk",
+    "location": 123,
+    "id": 457
+  },
+  {
+    "name": "Lobby chair #1",
+    "location": 729,
+    "id": 501
+  }
+]
+```
+
+**DELETE /locations/:id**
+
+Requests made with an empty body. Deletes the tracked item specified by the ID supplied in the URL. It then returns status ``200`` and an empty body.
+
+Returns status ``404`` if the supplied ID does not exist.
 
 ## Implementation
 
