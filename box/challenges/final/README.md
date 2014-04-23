@@ -86,7 +86,7 @@ If not all fields are send in the request return an HTTP error code and a JSON e
 
 **GET /locations**
 
-Requests made with an empty body. Returns status ``200`` and a JSON encoded array of all locations known to the system. Like this:
+Requests shall have an empty body. Returns status ``200`` and a JSON encoded array of all locations known to the system. Like this:
 
 ```json
 [
@@ -110,7 +110,7 @@ Requests made with an empty body. Returns status ``200`` and a JSON encoded arra
 
 **DELETE /locations/:id**
 
-Requests made with an empty body. Deletes the location specified by the ID supplied in the URL. It then returns status ``200`` and an empty body.
+Requests shall have an empty body. Deletes the location specified by the ID supplied in the URL. It then returns status ``200`` and an empty body.
 
 Returns status ``404`` if the supplied ID does not exist.
 
@@ -159,7 +159,7 @@ If not all fields are send in the request return an HTTP error code and a JSON e
 
 **GET /items**
 
-Requests made with an empty body. Returns status ``200`` and a JSON encoded array of all tracked items known to the system. Like this:
+Requests shall have an empty body. Returns status ``200`` and a JSON encoded array of all tracked items known to the system. Like this:
 
 ```json
 [
@@ -186,6 +186,50 @@ Requests made with an empty body. Returns status ``200`` and a JSON encoded arra
 Requests made with an empty body. Deletes the tracked item specified by the ID supplied in the URL. It then returns status ``200`` and an empty body.
 
 Returns status ``404`` if the supplied ID does not exist.
+
+## Report System
+
+The report system combines data from the location and item tracking system. It does not hold any data itself.
+
+The system has only one endpoint to get a list of all tracked items grouped by their respective location. Each request must be authenticated with a valid user name / password combination (see User Management System for all existing users).
+
+**GET /reports/by-location**
+
+Requests shall have an empty body. Returns status ``200`` and a JSON encoded array of all locations. Each location object has a key ``items`` which holds an array of all items in that location. Like this:
+
+```json
+[
+  {
+    "name": "Office Alexanderstraße",
+    "address": "Alexanderstraße 45, 33853 Bielefeld, Germany",
+    "id": 562,
+    "items": [
+      {
+        "name": "Johannas PC",
+        "location": 562,
+        "id": 456
+      },
+      {
+        "name": "Johannas desk",
+        "location": 562,
+        "id": 457
+      }
+    ]
+  },
+  {
+    "name": "Warehouse Hamburg",
+    "address": "Gewerbestraße 1, 21035 Hamburg, Germany",
+    "id": 563,
+    items: [
+      {
+        "name": "Lobby chair #1",
+        "location": 563,
+        "id": 501
+      }
+    ]
+  }
+]
+```
 
 ## Implementation
 
