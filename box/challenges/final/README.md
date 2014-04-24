@@ -2,6 +2,8 @@
 
 This challenge brings all things learned over the course of the SOA workshop together. It is your job to create multiple services that work together over the web.
 
+Please help each other as much as you can but make sure that each of you comes up with an **individual** solution. The submission is not supposed to be a group's work.
+
 ## Intro
 
 Your goal is to create a system that is used to track the inventory of a larger corporation. They run many offices in multiple locations and want to know how many pencils, staplers, computers, etc. they have in each of these locations.
@@ -233,8 +235,30 @@ Requests shall have an empty body. Returns status ``200`` and a JSON encoded arr
 
 ## Implementation
 
-* use whatever framework
+There are no hard limits on the way you build the systems. Ruby is preferred (if you want to use any other language please talk to me first so that we can ensure that I am able to read what you are coding). I strongly suggest building your systems with [Sinatra](todo) or [Grape](todo) but any framework of your choice, or the lack thereof, is fine by me.
 
 ## Important Aside
 
-During this challenge you create 4 services. Remember that while trying to resemble real life conditions these services are not meant to be ready for any *production* use. Your focus should therefore lie on the interaction between services, not making the services itself *pretty*, super stable or super performant.
+During this challenge you create 4 services. Remember that while trying to resemble real life conditions these services are not meant to be ready for any *production* use. Your focus should therefore lie on the interaction between services, not making the services itself *pretty*, super stable or super performant (this also means all validations that are not mentioned in this challenge).
+
+## Miscellaneous
+
+The deadline is June 1st 2014.
+
+For your submission please put each system in a seperate folder which's name easily determine it's content. Zip/Tar all 4 folders and please send a single archive file. If you have any remarks (how to handle your apps, etc) feel free to attach them as a README to the archive.
+
+If you have any questions regarding this challenge please open a GitHub issue on this repo. This way everyone can see the answer. In case you wish to keep a question private please email me instead.
+
+## Grading
+
+This is a rough overview of my grading scheme:
+
+Topic          | Points | Details
+-------------- | ------ | --------
+Implementation | 50     | Are your systems doing everything described in here and how well are they crafted 
+Documentation  | 15     | How well is each service and are shared mechanics (e.g. authentication) documented for someomne who **does not** have access to this document. There is nothing wrong in copying relevant parts from this document, too.
+Tests          | 15     | Are your services tested? How well are they tested? How well are the tests written?
+12factor       | 30     | Do your services and the way they are managed and configured obey the 12factor manifest?
+**Total**      | 110    |
+
+You will need 100 points for a 1+ (or your equivalent of *the best* grade possible). We all have our weak spots and this way you can still earn a perfect grade with some minor flaws.
