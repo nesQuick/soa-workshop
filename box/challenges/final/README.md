@@ -235,7 +235,7 @@ Requests shall have an empty body. Returns status ``200`` and a JSON encoded arr
 
 ## Implementation
 
-There are no hard limits on the way you build the systems. Ruby is preferred (if you want to use any other language please talk to me first so that we can ensure that I am able to read what you are coding). I strongly suggest building your systems with [Sinatra](todo) or [Grape](todo) but any framework of your choice, or the lack thereof, is fine by me.
+There are no hard limits on the way you build the systems. Ruby is preferred (if you want to use any other language please talk to me first so that we can ensure that I am able to read what you are coding). I strongly suggest building your systems with [Sinatra](http://www.sinatrarb.com/) or [Grape](https://github.com/intridea/grape) but any framework of your choice, or the lack thereof, is fine by me.
 
 ## Important Aside
 
