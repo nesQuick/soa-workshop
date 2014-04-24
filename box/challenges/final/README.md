@@ -21,6 +21,8 @@ We will run through all the different services one by one and all of them are st
 
 All systems communicate with each other and the end user over HTTP. For this challenge no SSL/TLS is used. As in prior challenges user authentication happens via HTTP Basic Auth. Please see the User Management service description for more details.
 
+!(Overview over all four systems)[assets/final-challenge-systems-overview.png]
+
 ### User Management
 
 The user management in our example is a very basic authentication system with 3 hard coded users. There is no way to add, change or delete users at all.
@@ -255,7 +257,7 @@ This is a rough overview of my grading scheme:
 
 Topic          | Points | Details
 -------------- | ------ | --------
-Implementation | 50     | Are your systems doing everything described in here and how well are they crafted 
+Implementation | 50     | Are your systems doing everything described in here and how well are they crafted
 Documentation  | 15     | How well is each service and are shared mechanics (e.g. authentication) documented for someomne who **does not** have access to this document. There is nothing wrong in copying relevant parts from this document, too.
 Tests          | 15     | Are your services tested? How well are they tested? How well are the tests written?
 12factor       | 30     | Do your services and the way they are managed and configured obey the 12factor manifest?
