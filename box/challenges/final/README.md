@@ -21,7 +21,7 @@ We will run through all the different services one by one and all of them are st
 
 All systems communicate with each other and the end user over HTTP. For this challenge no SSL/TLS is used. As in prior challenges user authentication happens via HTTP Basic Auth. Please see the User Management service description for more details.
 
-!(Overview over all four systems)[assets/final-challenge-systems-overview.png]
+![Overview over all four systems](assets/final-challenge-systems-overview.png)
 
 ### User Management
 
